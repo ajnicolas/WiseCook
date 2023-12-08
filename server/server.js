@@ -26,6 +26,7 @@ app.use(express.json());
 // Handle the login page route
 app.get('/', (req, res) => {
   // Send the login page HTML or render the login component here
+  console.log("server is running")
   res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
 });
 
