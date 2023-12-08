@@ -49,7 +49,7 @@ import pdfHeader from '../images/pdfHeader.png';
     
     const handleDeleteRecipe = async (recipeId) => {
       try {
-        const response = await fetch('http://localhost:8080/unsaverecipe', {
+        const response = await fetch('/unsaverecipe', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',    

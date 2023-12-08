@@ -16,7 +16,7 @@ function Recipes({user, setUser, handleSignOut}) {
     const fetchSavedRecipes = async () => {
       
       try {
-        const response = await fetch('http://localhost:8080/allsavedrecipes', {
+        const response = await fetch('/allsavedrecipes', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

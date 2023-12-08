@@ -189,7 +189,7 @@ function Home({user, setUser, handleSignOut}) {
 
   const handleDecrementLimiter = async () => {
     try {
-      const response = await fetch('http://localhost:8080/updateratelimit', { 
+      const response = await fetch('/updateratelimit', { 
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -233,7 +233,7 @@ function Home({user, setUser, handleSignOut}) {
     
     try {
       // Making a POST request to the updated '/recipe' endpoint
-      const response = await fetch('http://localhost:8080/recipe', { // Updated the URL to '/recipe'
+      const response = await fetch('/recipe', { // Updated the URL to '/recipe'
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -281,7 +281,7 @@ function Home({user, setUser, handleSignOut}) {
     };
   
     try {
-      const response = await fetch('http://localhost:8080/saverecipe', { // Replace with the actual endpoint
+      const response = await fetch('/saverecipe', { // Replace with the actual endpoint
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -318,7 +318,7 @@ function Home({user, setUser, handleSignOut}) {
 
   const handleDeleteRecipe = async () => {
     try {
-      const response = await fetch('http://localhost:8080/unsaverecipe', {
+      const response = await fetch('/unsaverecipe', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',    
@@ -365,7 +365,7 @@ function Home({user, setUser, handleSignOut}) {
       
     try {
       // Making a POST request to the '/regenerate' endpoint
-      const response = await fetch('http://localhost:8080/imagetorecipe', {
+      const response = await fetch('/imagetorecipe', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -438,7 +438,7 @@ function Home({user, setUser, handleSignOut}) {
   
     try {
       // Making a POST request to the '/regenerate' endpoint
-      const response = await fetch('http://localhost:8080/regenerate', {
+      const response = await fetch('/regenerate', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
