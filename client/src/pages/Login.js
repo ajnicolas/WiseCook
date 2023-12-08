@@ -8,7 +8,6 @@ function Login({setUser}) {
 
   async function handleCallbackResponse(response) {
     const userObject = jwt_decode(response.credential);
-    console.log(userObject);
 
     try {
         const res = await fetch('http://localhost:8080/login', { 
