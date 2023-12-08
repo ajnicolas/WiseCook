@@ -19,7 +19,7 @@ return (
   <Router>
     <div className="App">
       <Routes>
-        <Route path="/" element={<Login setUser={setUser} />} />
+        <Route path="/login" element={<Login setUser={setUser} />} />
         <Route path="/home" element={<Home user={user} setUser={setUser} handleSignOut={handleSignOut} />} />
         <Route path="/recipes" element={<Recipes user={user} setUser={setUser} handleSignOut={handleSignOut} />} />
         <Route path="/*" element={<Navigate to="/login" />} />
