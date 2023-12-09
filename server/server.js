@@ -15,7 +15,7 @@ PORT=8080;
 const app = express();
 app.use(cors());
 app.use(cors({
-  origin: 'https://wise-cook-server.vercel.app/',
+  origin: 'https://wise-cook-server.vercel.app',
   methods: ['GET', 'POST'],
   credentials: true,
 }));
