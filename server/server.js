@@ -13,6 +13,7 @@ PORT=8080;
 
 // Serve the React app
 const app = express();
+app.use(cors());
 app.use(cors({
   origin: 'https://wise-cook.vercel.app',
   methods: ['GET', 'POST'],
