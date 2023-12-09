@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-const cors = require('cors');
+// const cors = require('cors');
 // const recipeRoutes = require('./routes/recipeRoutes');
 const recipeController = require('./controllers/recipeController');
 const recipeModel = require('./models/recipeModel');
@@ -9,20 +9,16 @@ const userModel = require('./models/userModel');
 const visionController = require('./controllers/visionController');
 
 
-PORT=8080;
+const PORT= process.env.PORT || 9001;
 
 // Serve the React app
 const app = express();
 // app.use(cors());
-app.use(cors({
-  origin: 'https://wise-cook.vercel.app', // Replace with your actual client's origin
-  methods: ['GET', 'POST'],
-  credentials: true,
-}));
+// app.use(cors({ origin: false }));
 app.use(express.static(path.join(__dirname, 'client/build')));
 app.use(express.json());
 
-app.options('/login', cors()); // Enable preflight OPTIONS for /login
+// app.options('/login', cors()); // Enable preflight OPTIONS for /login
 
 
 // Handle the login page route
