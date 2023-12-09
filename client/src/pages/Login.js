@@ -10,7 +10,7 @@ function Login({setUser}) {
     const userObject = jwt_decode(response.credential);
 
     try {
-        const res = await fetch('https://wise-cook.vercel.app/login', { 
+        const res = await fetch('https://wise-cook-server.vercel.app/login', { 
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

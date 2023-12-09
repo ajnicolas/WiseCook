@@ -189,7 +189,7 @@ function Home({user, setUser, handleSignOut}) {
 
   const handleDecrementLimiter = async () => {
     try {
-      const response = await fetch('https://wise-cook.vercel.app/updateratelimit', { 
+      const response = await fetch('https://wise-cook-server.vercel.app/updateratelimit', { 
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -233,7 +233,7 @@ function Home({user, setUser, handleSignOut}) {
     
     try {
       // Making a POST request to the updated '/recipe' endpoint
-      const response = await fetch('https://wise-cook.vercel.app/recipe', { // Updated the URL to '/recipe'
+      const response = await fetch('https://wise-cook-server.vercel.app/recipe', { // Updated the URL to '/recipe'
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -281,7 +281,7 @@ function Home({user, setUser, handleSignOut}) {
     };
   
     try {
-      const response = await fetch('https://wise-cook.vercel.app/saverecipe', { // Replace with the actual endpoint
+      const response = await fetch('https://wise-cook-server.vercel.app/saverecipe', { // Replace with the actual endpoint
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -318,7 +318,7 @@ function Home({user, setUser, handleSignOut}) {
 
   const handleDeleteRecipe = async () => {
     try {
-      const response = await fetch('https://wise-cook.vercel.app/unsaverecipe', {
+      const response = await fetch('https://wise-cook-server.vercel.app/unsaverecipe', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',    
@@ -365,7 +365,7 @@ function Home({user, setUser, handleSignOut}) {
       
     try {
       // Making a POST request to the '/regenerate' endpoint
-      const response = await fetch('https://wise-cook.vercel.app/imagetorecipe', {
+      const response = await fetch('https://wise-cook-server.vercel.app/imagetorecipe', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -438,7 +438,7 @@ function Home({user, setUser, handleSignOut}) {
   
     try {
       // Making a POST request to the '/regenerate' endpoint
-      const response = await fetch('https://wise-cook.vercel.app/regenerate', {
+      const response = await fetch('https://wise-cook-server.vercel.app/regenerate', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
