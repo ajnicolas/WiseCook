@@ -15,6 +15,7 @@ function Login({setUser}) {
             headers: {
                 'Content-Type': 'application/json',
             },
+            credentials: 'include',
             body: JSON.stringify({ userObject:userObject }), // Sending userObject within an object as expected by the server
         });
 
