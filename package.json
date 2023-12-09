@@ -6,7 +6,7 @@
     "dotenv": "^16.3.1"
   },
   "scripts": {
-    "build": "cd client && npm install && CI=false npm run build && mv build ../public && cd ../server && npm install",
+    "build": "cd server && npm install",
     "start": "cd server && node server.js"
   }
 }
