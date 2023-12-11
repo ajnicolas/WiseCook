@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-// const cors = require('cors');
+const cors = require('cors');
 // const recipeRoutes = require('./routes/recipeRoutes');
 const recipeController = require('./controllers/recipeController');
 const recipeModel = require('./models/recipeModel');
@@ -9,7 +9,6 @@ const userModel = require('./models/userModel');
 const visionController = require('./controllers/visionController');
 
 
-const PORT= process.env.PORT || 9001;
 
 // Serve the React app
 const app = express();
@@ -18,7 +17,7 @@ app.use(cors({
 	methods: ["GET","POST"],
 	credentials: true
 }));
-app.use(express.static(path.join(__dirname, 'client/build')));
+// app.use(express.static(path.join(__dirname, 'client/build')));
 app.use(express.json());
 
 // app.options('/login', cors()); // Enable preflight OPTIONS for /login
@@ -274,4 +273,6 @@ app.get('/ingredients', async (req, res) => {
 });
 
 
-app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));
+app.listen(3001, () => {
+    console.log("Server is Running")
+})
