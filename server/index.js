@@ -9,7 +9,6 @@ const userModel = require('./models/userModel');
 const visionController = require('./controllers/visionController');
 
 
-
 // Serve the React app
 const app = express();
 app.use(cors({
@@ -37,7 +36,7 @@ app.get('/home', (req, res) => {
 });
 
 app.get('/recipes', (req, res) => {
-	// talk to database
+	res.json("Hello");
 });
 
 app.post('/login', async (req, res) => {
