@@ -13,8 +13,10 @@ const PORT= process.env.PORT || 9001;
 
 // Serve the React app
 const app = express();
-// app.use(cors());
-// app.use(cors({ origin: false }));
+app.use(cors({
+	origin: ["https://wise-cook-ajnicolas-projects.vercel.app"],
+	methods: ["GET","POST"],
+	credentials: true
 app.use(express.static(path.join(__dirname, 'client/build')));
 app.use(express.json());
 
