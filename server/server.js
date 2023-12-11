@@ -13,7 +13,7 @@ const visionController = require('./controllers/visionController');
 // Serve the React app
 const app = express();
 app.use(cors({
-	origin: ["https://wise-cook-ajnicolas-projects.vercel.app"],
+	origin: ["https://wise-cook-ajnicolas-projects.vercel.app", "https://wise-cook.vercel.app"],
 	methods: ["GET","POST","OPTIONS"],
 	credentials: true
 }));
