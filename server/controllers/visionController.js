@@ -2,7 +2,6 @@ const { OpenAI } = require('openai');
 const fetch = require('node-fetch');
 const fs = require('fs');
 const { promisify } = require('util');
-const sharp = require('sharp');
 
 // Create an instance of the OpenAIApi
 const openai = new OpenAI({
