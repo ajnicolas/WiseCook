@@ -17,7 +17,7 @@ app.use(cors({
 	methods: ["GET","POST","OPTIONS"],
 	credentials: true
 }));
-// app.use(express.static(path.join(__dirname, 'client/build')));
+app.use(express.static(path.join(__dirname, 'client/build')));
 app.use(express.json());
 
 // app.options('/login', cors()); // Enable preflight OPTIONS for /login
