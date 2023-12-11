@@ -49,11 +49,12 @@ import pdfHeader from '../images/pdfHeader.png';
     
     const handleDeleteRecipe = async (recipeId) => {
       try {
-        const response = await fetch('https://wise-cook-server.vercel.app/unsaverecipe', {
+        const response = await fetch('https://wise-cook-server-ajnicolas-projects.vercel.app/unsaverecipe', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',    
           },
+          credentials: 'include',
           body: JSON.stringify({ user_key: user, recipeID: recipeId }),
         });
     
