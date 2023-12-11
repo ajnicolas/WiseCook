@@ -14,7 +14,7 @@ const visionController = require('./controllers/visionController');
 const app = express();
 app.use(cors({
 	origin: ["https://wise-cook-ajnicolas-projects.vercel.app"],
-	methods: ["GET","POST"],
+	methods: ["GET","POST","OPTIONS"],
 	credentials: true
 }));
 // app.use(express.static(path.join(__dirname, 'client/build')));
