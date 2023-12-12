@@ -189,7 +189,7 @@ function Home({user, setUser, handleSignOut}) {
 
   const handleDecrementLimiter = async () => {
     try {
-      const response = await fetch('https://wise-cook-server-ajnicolas-projects.vercel.app/updateratelimit', { 
+      const response = await fetch('https://wisecook.uc.r.appspot.com/updateratelimit', { 
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -233,7 +233,7 @@ function Home({user, setUser, handleSignOut}) {
     
     try {
       // Making a POST request to the updated '/recipe' endpoint
-      const response = await fetch('https://wise-cook-server-ajnicolas-projects.vercel.app/recipe', { // Updated the URL to '/recipe'
+      const response = await fetch('https://wisecook.uc.r.appspot.com/recipe', { // Updated the URL to '/recipe'
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -282,7 +282,7 @@ function Home({user, setUser, handleSignOut}) {
     };
   
     try {
-      const response = await fetch('https://wise-cook-server-ajnicolas-projects.vercel.app/saverecipe', { // Replace with the actual endpoint
+      const response = await fetch('https://wisecook.uc.r.appspot.com/saverecipe', { // Replace with the actual endpoint
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -319,7 +319,7 @@ function Home({user, setUser, handleSignOut}) {
 
   const handleDeleteRecipe = async () => {
     try {
-      const response = await fetch('https://wise-cook-server-ajnicolas-projects.vercel.app/unsaverecipe', {
+      const response = await fetch('https://wisecook.uc.r.appspot.com/unsaverecipe', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',    
@@ -367,7 +367,7 @@ function Home({user, setUser, handleSignOut}) {
       
     try {
       // Making a POST request to the '/regenerate' endpoint
-      const response = await fetch('https://wise-cook-server-ajnicolas-projects.vercel.app/imagetorecipe', {
+      const response = await fetch('https://wisecook.uc.r.appspot.com/imagetorecipe', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -441,7 +441,7 @@ function Home({user, setUser, handleSignOut}) {
   
     try {
       // Making a POST request to the '/regenerate' endpoint
-      const response = await fetch('https://wise-cook-server-ajnicolas-projects.vercel.app/regenerate', {
+      const response = await fetch('https://wisecook.uc.r.appspot.com/regenerate', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -16,7 +16,7 @@ function Recipes({user, setUser, handleSignOut}) {
     const fetchSavedRecipes = async () => {
       
       try {
-        const response = await fetch('https://wise-cook-server-ajnicolas-projects.vercel.app/allsavedrecipes', {
+        const response = await fetch('https://wisecook.uc.r.appspot.com/allsavedrecipes', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
