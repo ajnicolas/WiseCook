@@ -16,8 +16,6 @@ function App() {
   return (
     <Router>
       <div className="App">
-        {/* Navbar */}
-        {user && Object.keys(user).length > 0 && <Navbar user={user} handleSignOut={handleSignOut} />}
 
         {/* Routes */}
         <Routes>
