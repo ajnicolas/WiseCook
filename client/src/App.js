@@ -6,16 +6,6 @@ import Recipes from './pages/Recipes';
 import Navbar from './navigation/Navbar';
 import './App.css';
 
-const PrivateRoute = ({ element, user }) => {
-  // Check if the user is authenticated (not empty)
-  if (user && Object.keys(user).length > 0) {
-    return element; // Return the provided element if the user is authenticated
-  } else {
-    // Redirect to the login page if the user is empty
-    return <Navigate to="/login" />;
-  }
-};
-
 function App() {
   const [user, setUser] = useState({});
 
@@ -26,17 +16,39 @@ function App() {
   return (
     <Router>
       <div className="App">
+        {/* Navbar */}
+        {user && Object.keys(user).length > 0 && <Navbar user={user} handleSignOut={handleSignOut} />}
+
+        {/* Routes */}
         <Routes>
-          <Route path="/login" element={<Login setUser={setUser} />} />
+          <Route
+            path="/login"
+            element={<Login setUser={setUser} />}
+          />
+          {/* PrivateRoute for Home */}
           <Route
             path="/home"
-            element={<PrivateRoute element={<Home user={user} setUser={setUser} />} user={user} />}
+            element={
+              user && Object.keys(user).length > 0 ? (
+                <Home user={user} setUser={setUser} />
+              ) : (
+                <Navigate to="/login" />
+              )
+            }
           />
+          {/* PrivateRoute for Recipes */}
           <Route
             path="/recipes"
-            element={<PrivateRoute element={<Recipes user={user} setUser={setUser} />} user={user} />}
+            element={
+              user && Object.keys(user).length > 0 ? (
+                <Recipes user={user} setUser={setUser} />
+              ) : (
+                <Navigate to="/login" />
+              )
+            }
           />
-          {user && Object.keys(user).length > 0 && <Navbar user={user} handleSignOut={handleSignOut} />}
+          {/* Default Redirect */}
+          <Route path="/*" element={<Navigate to="/login" />} />
         </Routes>
       </div>
     </Router>
