@@ -28,7 +28,7 @@ function App() {
             path="/home"
             element={
               user && Object.keys(user).length > 0 ? (
-                <Home user={user} setUser={setUser} />
+                <Home user={user} setUser={setUser} handleSignOut={handleSignOut} />
               ) : (
                 <Navigate to="/login" />
               )
@@ -39,7 +39,7 @@ function App() {
             path="/recipes"
             element={
               user && Object.keys(user).length > 0 ? (
-                <Recipes user={user} setUser={setUser} />
+                <Recipes user={user} setUser={setUser} handleSignOut={handleSignOut} />
               ) : (
                 <Navigate to="/login" />
               )
